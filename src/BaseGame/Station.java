@@ -9,10 +9,14 @@ public class Station {
   private final String name;
   private int tier;
   private int people;
+  private final int x;
+  private final int y;
 
-  public Station(String name){
+  public Station(String name, int x, int y){
     this.name = name;
     stations = new ArrayList<>();
+    this.x = x;
+    this.y = y;
   }
 
   public List<Line> getStations(){
@@ -31,4 +35,11 @@ public class Station {
     return people;
   }
 
+  public int getX() {
+    return x;
+  }
+
+  public int getY() {
+    return y;
+  }
 }
